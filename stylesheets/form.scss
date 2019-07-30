@@ -7,7 +7,7 @@ $color-title2: #2A3554;
 $color-txt-error: #FE4962;
 $color-txt-link: #0A92EF;
 $bg-color-primary: #30CF94;
-
+$color-secondary-dark: #25006f;
 
 
 @mixin flexbox ($flexDirection, $justifyContent, $alignItems){
@@ -65,6 +65,10 @@ $bg-color-primary: #30CF94;
   .logo{
     height: 45px;
   }
+
+  .fa-bars{
+    display:none;
+  }
 }
 
 .main{
@@ -109,10 +113,24 @@ $bg-color-primary: #30CF94;
             border-bottom: 1px solid #A3A6B4;
             padding: 2px;
             @include font-body-2();
-            font-style:italic;
             margin-bottom: 5px;
           }
           
+          input::-webkit-input-placeholder{
+            font-style:italic;
+          }
+          input::-moz-placeholder{
+            font-style:italic;
+          }
+
+          input:-ms-input-placeholder{
+            font-style:italic;
+          }
+
+          input:-moz-placeholder{ 
+            font-style:italic;
+          }
+
           .fa-exclamation-circle{
             color:$color-txt-error;
             float: right;
@@ -203,41 +221,35 @@ footer{
 }
 
 .hidden{
-  display:none;
+  display:none !important;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
   .header{
     width:100%;
-    height: 80px;
-    background-color: $background;
+    height: 70px;
     z-index: 1;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
-    box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
+    padding: 20px;
   
-    @include flexbox (row, center, center);
+    @include flexbox (row, space-between, center);
   
     .logo{
-      height: 45px;
+      height: 40px;
+    }
+
+    .fa-bars{
+      color:$color-secondary-dark;   
+      font-size: 18px; 
+      display:block;
     }
   }
   
   .main{
   
     .bg-form{
-      width: 60%;
-      padding: 20px;
-      background-color: $background;
-      border-radius: 4px 4px 4px 4px;
-      -moz-border-radius: 4px 4px 4px 4px;
-      -webkit-border-radius: 4px 4px 4px 4px;
-      margin: 50px 0;
+      width: 90%;
+      margin: 30px 0 50px 0;
   
       .font-headline-6{
         margin-bottom: 35px;
@@ -245,112 +257,44 @@ footer{
       }
   
       .form{
-        @include flexbox(row, center, center);
+        @include flexbox(column, flex-start, center);
   
         .fields{
           width:100%;
-          @include flexbox(row, space-between, flex-start);
-          flex-wrap: wrap;
+          @include flexbox(column, flex-start, flex-start);
   
           .each{
-            width: 49%;
+            width: 100%;
             margin-bottom: 35px;
-  
-            .title-2{
-              @include title-2();
-              margin-bottom: 2px;
-            }
-  
-            input{
-              width: 100%;
-              border:none;
-              border-bottom: 1px solid #A3A6B4;
-              padding: 2px;
-              @include font-body-2();
-              font-style:italic;
-              margin-bottom: 5px;
-            }
-            
-            .fa-exclamation-circle{
-              color:$color-txt-error;
-              float: right;
-              position: relative;
-              top:-25px;
-              margin-right: 5px;
-            }
-        
-            .font-body-3{
-              @include font-body-3();
-              color: $color-txt-error;
-            } 
           }
   
           .each:nth-child(5){
-            width: 100%;
-            margin-bottom: 20px;
   
             input:nth-child(2) {
-              width: calc(20% - 5px);
+              width: calc(40% - 5px);
               margin-right: 5px;
             }
   
             input:nth-child(3){
-              width: 29%;
-            }
-  
-            .width{
-              width:100%;
-  
-              .font-body-3{
-                display: inline;
-                margin-right: 2px;
-              }
+              width: 58%;
             }
           }
   
-          .row{
-            display:flex;
-            align-items: center;
-  
-            .circle{
-              width: 6px;
-              height: 6px;
-              border: 1px solid $color-txt-error;
-              border-radius: 6px 6px 6px 6px;
-              -moz-border-radius: 6px 6px 6px 6px;
-              -webkit-border-radius: 6px 6px 6px 6px;
-              margin-right: 3px;
-            }   
-  
-            .font-body-3{
-              margin-right: 10px;
-            } 
-          }
           .legals{
             width:100%;
             @include font-body-3();
-  
-            a{
-              color: $color-txt-link;
-              cursor: pointer;
-            }
           }
         }
        
         button{
-          width:50%;
-          height: 40px;
-          margin-top: 30px;
-          background-color: $bg-color-primary;
-          border: none;
-          border-radius: 4px 4px 4px 4px;
-          -moz-border-radius: 4px 4px 4px 4px;
-          -webkit-border-radius: 4px 4px 4px 4px;
-          color: $background;
-          cursor: pointer;
+          width:100%;
         }
       }
     }
   }
   
+  footer{
+    width:100%;
+    margin: 20px 10px; 
+  }
 }
