@@ -29,16 +29,28 @@ $color-secondary-dark: #25006f;
   color: $color-title2;
 }
 
-@mixin font-body-2{
+@mixin font-body-2(){
   font-weight:regular;
   font-size:13px;
   color: $color-txt;
 }
 
-@mixin font-body-3{
+@mixin font-body-3(){
   font-weight:regular;
   font-size:12px;
   color: $color-txt;
+}
+
+@mixin button(){
+  height: 40px;
+  margin-top: 30px;
+  background-color: $bg-color-primary;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  color: $background;
+  cursor: pointer;
 }
 
 *{
@@ -52,14 +64,13 @@ $color-secondary-dark: #25006f;
   height: 80px;
   background-color: $background;
   z-index: 1;
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
   -moz-box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
   box-shadow: 0px 3px 5px 0px rgba(163,166,180,0.8);
-
   @include flexbox (row, center, center);
 
   .logo{
@@ -85,7 +96,7 @@ $color-secondary-dark: #25006f;
     -webkit-border-radius: 4px 4px 4px 4px;
     margin: 50px 0;
 
-    .font-headline-6{
+    .title{
       margin-bottom: 35px;
       @include font-headline-6();
     }
@@ -199,15 +210,8 @@ $color-secondary-dark: #25006f;
      
       button{
         width:50%;
-        height: 40px;
-        margin-top: 30px;
-        background-color: $bg-color-primary;
-        border: none;
-        border-radius: 4px 4px 4px 4px;
-        -moz-border-radius: 4px 4px 4px 4px;
-        -webkit-border-radius: 4px 4px 4px 4px;
-        color: $background;
-        cursor: pointer;
+        @include button();
+        
       }
     }
   }
@@ -223,6 +227,35 @@ footer{
 .hidden{
   display:none !important;
 }
+
+
+//confirm_registration
+.bg-success{
+  width: 60%;
+  padding: 20px;
+  margin:50px 0 80px 0;
+  @include flexbox(column, flex-start, center);
+
+  .img-success{
+    width:100px;
+  }
+
+  .title-success{
+    @include font-headline-6();
+    margin-bottom: 20px;
+  }
+
+  .subtitle-success{
+    @include font-body-2();
+    text-align: center;
+  }
+
+  button{
+    width: 50%;
+    @include button();
+  }
+}
+
 
 @media screen and (max-width: 500px) {
 
@@ -292,7 +325,28 @@ footer{
       }
     }
   }
-  
+
+  //confirm_registration
+  .bg-success{
+    width: 90%;
+    padding: 20px;
+    margin:30px 0 80px 0;
+
+    .img-success{
+      width:100px;
+    }
+
+    .title-success{
+      @include font-headline-6();
+      margin-bottom: 20px;
+    }
+
+    button{
+      width: 90%;
+      @include button();
+    }
+  }
+    
   footer{
     width:100%;
     margin: 20px 10px; 

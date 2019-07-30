@@ -10,7 +10,6 @@
   background-color: #FFFFFF;
   z-index: 1;
   position: -webkit-sticky;
-  /* Safari */
   position: sticky;
   top: 0;
   z-index: 1;
@@ -46,7 +45,7 @@
   -webkit-border-radius: 4px 4px 4px 4px;
   margin: 50px 0;
 }
-.main .bg-form .font-headline-6 {
+.main .bg-form .title {
   margin-bottom: 35px;
   font-weight: bold;
   font-size: 18px;
@@ -181,6 +180,43 @@ footer {
   display: none !important;
 }
 
+.bg-success {
+  width: 60%;
+  padding: 20px;
+  margin: 50px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bg-success .img-success {
+  width: 100px;
+}
+.bg-success .title-success {
+  font-weight: bold;
+  font-size: 18px;
+  color: #707070;
+  margin-bottom: 20px;
+}
+.bg-success .subtitle-success {
+  font-weight: regular;
+  font-size: 13px;
+  color: #707070;
+  text-align: center;
+}
+.bg-success button {
+  width: 50%;
+  height: 40px;
+  margin-top: 30px;
+  background-color: #30CF94;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 500px) {
   .header {
     width: 100%;
@@ -243,6 +279,33 @@ footer {
   }
   .main .bg-form .form button {
     width: 100%;
+  }
+
+  .bg-success {
+    width: 90%;
+    padding: 20px;
+    margin: 30px 0 80px 0;
+  }
+  .bg-success .img-success {
+    width: 100px;
+  }
+  .bg-success .title-success {
+    font-weight: bold;
+    font-size: 18px;
+    color: #707070;
+    margin-bottom: 20px;
+  }
+  .bg-success button {
+    width: 90%;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #30CF94;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
   }
 
   footer {
