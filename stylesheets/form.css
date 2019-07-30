@@ -40,6 +40,7 @@
   width: 60%;
   padding: 20px;
   background-color: #FFFFFF;
+  margin: 50px 0;
   border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
@@ -139,6 +140,7 @@
   border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
+  margin: 50px 0;
   margin-right: 3px;
 }
 .main .bg-form .form .fields .row .font-body-3 {
@@ -160,11 +162,12 @@
   margin-top: 30px;
   background-color: #30CF94;
   border: none;
+  color: #FFFFFF;
+  cursor: pointer;
   border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
-  color: #FFFFFF;
-  cursor: pointer;
+  margin: 50px 0;
 }
 
 footer {
@@ -210,11 +213,51 @@ footer {
   margin-top: 30px;
   background-color: #30CF94;
   border: none;
+  color: #FFFFFF;
+  cursor: pointer;
   border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
-  color: #FFFFFF;
-  cursor: pointer;
+  margin: 50px 0;
+}
+
+.modal-terms {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal-terms:before {
+  content: "";
+  background-color: #25006f;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  display: block;
+  position: absolute;
+}
+
+.container-terms {
+  width: 60%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px auto;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  margin: 50px 0;
+}
+.container-terms .fa-times {
+  color: #707070;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 @media screen and (max-width: 500px) {
@@ -301,11 +344,12 @@ footer {
     margin-top: 30px;
     background-color: #30CF94;
     border: none;
+    color: #FFFFFF;
+    cursor: pointer;
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
-    cursor: pointer;
+    margin: 50px 0;
   }
 
   footer {

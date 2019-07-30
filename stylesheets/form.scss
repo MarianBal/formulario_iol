@@ -17,6 +17,13 @@ $color-secondary-dark: #25006f;
   align-items:$alignItems;
 }
 
+@mixin borderRadius($r){
+  border-radius: $r $r $r $r;
+  -moz-border-radius: $r $r $r $r;
+  -webkit-border-radius: $r $r $r $r;
+  margin: 50px 0;
+}
+
 @mixin font-headline-6(){
   font-weight:bold;
   font-size:18px;
@@ -46,11 +53,9 @@ $color-secondary-dark: #25006f;
   margin-top: 30px;
   background-color: $bg-color-primary;
   border: none;
-  border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  -webkit-border-radius: 4px 4px 4px 4px;
   color: $background;
   cursor: pointer;
+  @include borderRadius(4px);
 }
 
 *{
@@ -91,10 +96,8 @@ $color-secondary-dark: #25006f;
     width: 60%;
     padding: 20px;
     background-color: $background;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
     margin: 50px 0;
+    @include borderRadius(4px);
 
     .title{
       margin-bottom: 35px;
@@ -187,9 +190,7 @@ $color-secondary-dark: #25006f;
             width: 6px;
             height: 6px;
             border: 1px solid $color-txt-error;
-            border-radius: 6px 6px 6px 6px;
-            -moz-border-radius: 6px 6px 6px 6px;
-            -webkit-border-radius: 6px 6px 6px 6px;
+            @include borderRadius(6px);
             margin-right: 3px;
           }   
 
@@ -254,6 +255,45 @@ footer{
     width: 50%;
     @include button();
   }
+}
+
+//modal-terms
+.modal-terms{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index:2;
+}
+.modal-terms:before{
+  content: "";
+  background-color:$color-secondary-dark;
+  width:100%;
+  height:100vh;
+  opacity:0.5;
+  display: block;
+  position: absolute;
+}
+
+.container-terms{
+  width: 60%;
+  padding: 20px;
+  background-color: $background;
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px auto;
+  @include borderRadius(4px);
+
+  .fa-times{
+    color: $color-txt;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  
 }
 
 
