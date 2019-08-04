@@ -206,6 +206,7 @@ a{
         }
 
         .row{
+          height:20px;
           display:flex;
           align-items: center;
 
@@ -310,7 +311,7 @@ footer{
   margin: 30px auto;
   @include borderRadius(4px);
 
-  .fa-modal{
+  .fa-times{
     color: $color-txt;
     position: absolute;
     top: 15px;

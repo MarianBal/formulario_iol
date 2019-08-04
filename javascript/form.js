@@ -22,11 +22,28 @@ form.onsubmit= e =>{
   e.preventDefault();
 
   form.querySelectorAll('input').forEach(i=>{
-    i.value ? '' : i.parentNode.querySelector('.fa-exclamation-circle').classList.remove('hidden');
-    i.value ? '' : i.parentNode.querySelector('.font-body-3').classList.remove('hidden');
+    i.value.trim() ? i.parentNode.querySelector('.fa-exclamation-circle').classList.add('hidden') : i.parentNode.querySelector('.fa-exclamation-circle').classList.remove('hidden');
+    i.value.trim() ? i.parentNode.querySelector('.font-body-3').classList.add('hidden') : i.parentNode.querySelector('.font-body-3').classList.remove('hidden');
   })
 
-    
+  const email= document.getElementById('email');
+  const emailValidate = /^\w.*@\w+\.\w/.test(email.value);
+
+  emailValidate == false ? email.parentNode.querySelector('.font-body-3').classList.remove('hidden') : ''; 
+
+  const validateEmail= document.getElementById('validate-mail');
+
+  validateEmail.value == email.value ? '' : validateEmail.parentNode.querySelector('.font-body-3').classList.remove('hidden'); 
+  
+  const password= document.getElementById('password');
+
+  password.value.trim() < 8 ?  password.parentNode.parentNode.querySelector('.fa-exclamation-circle').classList.add('hidden')
+
+
+
+
+
+
 }
 
 
