@@ -146,15 +146,19 @@ a {
 .main .bg-form .form .fields .row .circle {
   width: 6px;
   height: 6px;
-  border: 1px solid #FE4962;
+  border: 1px solid #707070;
   border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
   margin: 50px 0;
   margin-right: 3px;
 }
-.main .bg-form .form .fields .row .font-body-3 {
+.main .bg-form .form .fields .row .font-body-3-validate {
+  font-weight: regular;
+  font-size: 12px;
+  color: #707070;
   margin-right: 10px;
+  color: #707070;
 }
 .main .bg-form .form .fields .legals {
   width: 100%;
@@ -191,6 +195,30 @@ footer {
 
 .hidden {
   display: none !important;
+}
+
+.error-circle {
+  border: none !important;
+  background-color: #FE4962;
+}
+
+.validate-circle {
+  border: none !important;
+  background-color: #30CF94;
+}
+
+.error-text {
+  font-weight: regular;
+  font-size: 12px;
+  color: #707070;
+  color: #FE4962 !important;
+}
+
+.validate-text {
+  font-weight: regular;
+  font-size: 12px;
+  color: #707070;
+  color: #30CF94 !important;
 }
 
 .bg-success {

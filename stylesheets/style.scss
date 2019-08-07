@@ -213,13 +213,15 @@ a{
           .circle{
             width: 6px;
             height: 6px;
-            border: 1px solid $color-txt-error;
+            border: 1px solid  $color-txt;
             @include borderRadius(6px);
             margin-right: 3px;
           }   
 
-          .font-body-3{
+          .font-body-3-validate{
+            @include font-body-3();
             margin-right: 10px;
+            color:  $color-txt;
           } 
         }
         .legals{
@@ -253,6 +255,27 @@ footer{
   display:none !important;
 }
 
+.error-circle{
+  border: none !important;
+  background-color: $color-txt-error;
+}
+
+.validate-circle{
+  border: none !important;
+  background-color: $bg-color-primary;
+}
+
+.error-text{
+  @include font-body-3();
+  color: $color-txt-error !important;
+}
+
+.validate-text{
+  @include font-body-3();
+  color: $bg-color-primary !important;
+}
+
+
 
 //confirm_registration
 .bg-success{
@@ -280,6 +303,7 @@ footer{
     @include button();
   }
 }
+
 
 //modal-terms
 .modal{

@@ -37,11 +37,18 @@ form.onsubmit= e =>{
   
   const password= document.getElementById('password');
 
-  password.value.trim() < 8 ?  password.parentNode.parentNode.querySelector('.fa-exclamation-circle').classList.add('hidden')
+  if(password.value.trim()<8){
 
+    document.getElementById('character').classList.add('error-circle');
+    document.getElementById('character-text').classList.add('error-text');
+  
+  }else{
 
+    document.getElementById('character').classList.add('validate-circle');
+    document.getElementById('character-text').classList.add('validate-text');
 
-
+  }
+  //password.parentNode.parentNode.querySelector('.character').classList.add('.error-text'):password.parentNode.parentNode.querySelector('.character').classList.add('.validate-text');
 
 
 }
