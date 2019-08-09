@@ -1,4 +1,3 @@
-
 //hamb
 document.querySelector('.fa-bars').onclick=()=>document.querySelector('.hamb').classList.toggle('hidden')
 
@@ -74,6 +73,7 @@ form.onsubmit= e =>{
     send = true;
 
   }
+  send==true &&form.submit();
 }
 
 
