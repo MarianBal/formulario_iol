@@ -49,6 +49,8 @@
               <input type="text" id="validate-mail" placeholder="minombre@ejemplo.com"/>
               <i class="hidden fas fa-exclamation-circle"></i>
               <div class="hidden font-body-3">Campo obligatorio</div>
+              <div class="hidden font-body-3" id="error">Mails no coinciden</div>
+
             </div>
             <div class="each">
               <div class="title-2">Celular</div>
@@ -58,6 +60,7 @@
               <div class="width">
                 <div class="hidden font-body-3">Campo obligatorio</div>
                 <div class="hidden font-body-3">Campo obligatorio</div>
+
               </div>
             </div>
             <div class="each">
@@ -73,8 +76,6 @@
                 <div class="font-body-3-validate" id="number-text">                  
                   1 número
                 </div>
-                <div class="font-body-3 hidden"></div>               
-
               </div>
 
             </div>
@@ -83,6 +84,8 @@
               <input type="password" placeholder="******"/>
               <i class="hidden  fas fa-exclamation-circle"></i>
               <div class="hidden font-body-3">Campo obligatorio</div>
+              <div class="font-body-3 hidden" id="error"> contraseña no coincide</div>               
+
             </div>
             <div class="legals">Al registrarme acepto haber leído y estar de acuerdo con las <a id="terms">condiciones de uso</a> y <a id="privacy">politica de privacidad</a>.</div>
             <button>Registrarme</button>
