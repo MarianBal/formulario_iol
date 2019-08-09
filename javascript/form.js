@@ -14,11 +14,10 @@ document.querySelectorAll('.close-modal').forEach(f=>f.onclick =()=> f.parentNod
 //form
 const form = document.querySelector('form');
 
-let send = false;
-
 form.onsubmit= e =>{
   e.preventDefault();
 
+  let send = false;
   let inputFlag = true;
 
   form.querySelectorAll('input').forEach(i=>{
@@ -36,7 +35,7 @@ form.onsubmit= e =>{
 
   const validateEmail= document.getElementById('validate-mail');
 
-  validateEmail.value == email.value ? '' : document.getElementById('error').classList.remove('hidden');
+  validateEmail.value == email.value ? '' : document.getElementById('mailError').classList.remove('hidden');
   
   const password= document.getElementById('password');
 
