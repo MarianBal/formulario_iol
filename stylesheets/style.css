@@ -37,6 +37,83 @@ a {
   display: none;
 }
 
+.bg-main {
+  width: 100%;
+  height: calc(100vh-80px);
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 2;
+}
+
+.bg-main:before {
+  content: "";
+  background-color: #25006f;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  display: block;
+  position: absolute;
+}
+
+.main-register {
+  width: 60%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px auto;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-register .title-2 {
+  font-weight: regular;
+  font-size: 13px;
+  color: #2A3554;
+  margin-bottom: 2px;
+}
+.main-register .loggin {
+  width: 50%;
+  margin-top: 10px;
+  height: 40px;
+  background-color: #30CF94;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  margin: 50px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.main-register a {
+  width: 50%;
+}
+.main-register a .singin {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 2px solid #25006f;
+  color: #25006f;
+  cursor: pointer;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  margin: 50px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .main {
   width: 100%;
   background-color: #F0F0F7;
@@ -173,7 +250,6 @@ a {
 .main .bg-form .form button {
   width: 50%;
   height: 40px;
-  margin-top: 30px;
   background-color: #30CF94;
   border: none;
   color: #FFFFFF;
@@ -182,6 +258,7 @@ a {
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
   margin: 50px 0;
+  margin-top: 30px;
 }
 
 footer {
@@ -248,7 +325,6 @@ footer {
 .bg-success button {
   width: 50%;
   height: 40px;
-  margin-top: 30px;
   background-color: #30CF94;
   border: none;
   color: #FFFFFF;
@@ -257,6 +333,7 @@ footer {
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
   margin: 50px 0;
+  margin-top: 30px;
 }
 
 .modal {
@@ -322,7 +399,6 @@ footer {
 }
 .container-modal .secondary-button {
   height: 40px;
-  margin-top: 30px;
   background-color: #FFFFFF;
   border: 2px solid #25006f;
   color: #25006f;
@@ -334,6 +410,7 @@ footer {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 500px) {
@@ -367,6 +444,48 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .bg-main {
+    height: calc(100vh-70px);
+    top: 70px;
+  }
+
+  .main-register {
+    width: 90%;
+  }
+  .main-register .loggin {
+    width: 60%;
+    margin-top: 10px;
+    height: 40px;
+    background-color: #30CF94;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    margin: 50px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .main-register a {
+    width: 60%;
+  }
+  .main-register a .singin {
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 2px solid #25006f;
+    color: #25006f;
+    cursor: pointer;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    margin: 50px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .main .bg-form {
@@ -430,7 +549,6 @@ footer {
   .bg-success button {
     width: 90%;
     height: 40px;
-    margin-top: 30px;
     background-color: #30CF94;
     border: none;
     color: #FFFFFF;
@@ -439,6 +557,7 @@ footer {
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
     margin: 50px 0;
+    margin-top: 30px;
   }
 
   footer {
